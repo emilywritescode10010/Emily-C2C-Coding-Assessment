@@ -1,0 +1,19 @@
+Level 1
+Goal: List all tables that are currently free (‘o’ in the chosen timeslot)
+Output: A list of table IDs (or the entire table object) representing free tables.
+Level 2
+Goal: Given a party size (e.g., 2, 3, 4 people), find one table that can seat at least that many people (i.e., capacity >= party_size) and is free.
+Output: Return a single table (or table ID) that fits the requirement.
+Level 3
+Goal: Given a party size, return all tables that can seat that many people and are free.
+Hint: Parse the capacity from labels like “T2(4)” and check if the corresponding cell in the layout is ‘o’ for the timeslot
+Level 4
+Goal: Some restaurants can combine two adjacent tables if one table alone isn’t big enough.
+If a single table can’t seat the group, check if two adjacent tables combined have enough capacity.
+Output: A list of all table combinations (single or adjacent pairs) that can seat the party.
+Adjacency Example:
+If “T1(2)” is in column 1 and “T2(4)” is in column 2, and both columns have ‘o’ in row 3 (for timeslot 3), you can combine them for a capacity of 6. This seats a party of 5 or 6.
+Bonus
+Optional: Output the results in a user-friendly message such as:
+"Table 1 is free and can seat 2 people."
+Or for combos: "Tables 1 and 2 together can seat 6 people."
